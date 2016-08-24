@@ -27,5 +27,6 @@ Imports:
     parallel,
 Suggests:
     knitr,
-    testthat
+    testthat,
+    shiny
 RoxygenNote: 5.0.1
