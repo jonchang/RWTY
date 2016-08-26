@@ -42,7 +42,7 @@ shinyUI(fluidPage(
       )
     ),
     mainPanel(
-      plotOutput('contents')
+      uiOutput('plots')
     )
   )
 ))
