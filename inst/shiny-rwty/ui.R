@@ -22,27 +22,10 @@ shinyUI(fluidPage(
                 )
       ),
       tags$hr(),
-      checkboxInput('header', 'Header', TRUE),
-      radioButtons('sep', 'Separator',
-                   c(Comma=',',
-                     Semicolon=';',
-                     Tab='\t'),
-                   ','),
-      radioButtons('quote', 'Quote',
-                   c(None='',
-                     'Double Quote'='"',
-                     'Single Quote'="'"),
-                   '"'),
-      tags$hr(),
-      p('If you want a sample .csv or .tsv file to upload,',
-        'you can first download the sample',
-        a(href = 'mtcars.csv', 'mtcars.csv'), 'or',
-        a(href = 'pressure.tsv', 'pressure.tsv'),
-        'files, and then try uploading them.'
-      )
+      selectInput("plot_select", label = "Parameter", choices = NULL)
     ),
     mainPanel(
-      uiOutput('plots')
+      plotOutput('plots')
     )
   )
 ))
